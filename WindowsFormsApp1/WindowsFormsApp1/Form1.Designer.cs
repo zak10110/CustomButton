@@ -36,8 +36,7 @@ namespace WindowsFormsApp1
             this.Text = "Form1";
 
             button = new ZohaButton(new System.Drawing.Size(200,70),new System.Drawing.Point(100,100),Color.DarkCyan);
-            //button.Click += Button_Click;
-            //button.Paint += Button_Paint;
+            
 
             this.Controls.Add(button);
 
@@ -46,24 +45,6 @@ namespace WindowsFormsApp1
 
        
 
-        //private void Button_Click(object sender, System.EventArgs e)
-        //{
-        //    Ison = !Ison;
-        //    brush.Color = (Ison) ? Color.DarkSeaGreen : Color.PaleVioletRed;
-        //    ElipsCoordX =(Ison)? button.Size.Width - (step*6):step2;
-        //    button.Invalidate();
-
-
-        //}
-
-
-        //private void Button_Paint(object sender, System.Windows.Forms.PaintEventArgs e)
-        //{
-        //    var draw = button.CreateGraphics();
-        //    draw.FillRectangle(brush, new Rectangle(step, step, button.Size.Width - (step * 2), button.Size.Height - (step * 2)));
-        //    draw.FillEllipse(Brushes.Aquamarine, new Rectangle(ElipsCoordX, step2, ((button.Size.Width - (step * 10)) / 2), ((button.Size.Height - 21))));
-
-        //}
 
         ZohaButton button;
 
