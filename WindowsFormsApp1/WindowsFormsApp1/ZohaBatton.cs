@@ -11,11 +11,17 @@ namespace WindowsFormsApp1
     public class ZohaButton:Control
     {
 
-        int step = 10;
-        int step2 = 11;
+        readonly int step = 10;
+        readonly int step2 = 11;
         int ElipsCoordX = 11;
+        readonly  int step3 = 21;
+        readonly int two = 2;
+        readonly  int six = 6;
         bool Ison = true;
         SolidBrush brush = new SolidBrush(Color.DarkSeaGreen);
+        Color red = Color.PaleVioletRed;
+        Color green = Color.DarkSeaGreen;
+        Color Aqua = Color.Aquamarine;
 
         public  ZohaButton(Size Size,Point Location,Color color):this()
         {
@@ -36,8 +42,8 @@ namespace WindowsFormsApp1
         private void ButtonChange(object sender, System.EventArgs e)
         {
             Ison = !Ison;
-            brush.Color = (Ison) ? Color.DarkSeaGreen : Color.PaleVioletRed;
-            ElipsCoordX = (Ison) ? this.Size.Width - (step * 6) : step2;
+            brush.Color = (Ison) ? green : red;
+            ElipsCoordX = (Ison) ? this.Size.Width - (step * six) : step2;
             this.Invalidate();
 
 
@@ -47,8 +53,8 @@ namespace WindowsFormsApp1
         private void Button_Peint(object sender, System.EventArgs e)
         {
             var draw = this.CreateGraphics();
-            draw.FillRectangle(brush, new Rectangle(step, step, this.Size.Width - (step * 2), this.Size.Height - (step * 2)));
-            draw.FillEllipse(Brushes.Aquamarine, new Rectangle(ElipsCoordX, step2, ((this.Size.Width - (step * 10)) / 2), ((this.Size.Height - 21))));
+            draw.FillRectangle(brush, new Rectangle(step, step, this.Size.Width - (step * two), this.Size.Height - (step * two)));
+            draw.FillEllipse(Brushes.Aqua, new Rectangle(ElipsCoordX, step2, ((this.Size.Width - (step * step)) / two), ((this.Size.Height - step3))));
 
         }
     }
