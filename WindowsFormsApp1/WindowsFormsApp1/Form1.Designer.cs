@@ -54,7 +54,7 @@ namespace WindowsFormsApp1
         {
             Ison = !Ison;
             brush.Color = (Ison) ? Color.DarkSeaGreen : Color.PaleVioletRed;
-           
+            ElipsCoordX =(Ison)? button.Size.Width - (step*6):step2;
             button.Invalidate();
 
 
