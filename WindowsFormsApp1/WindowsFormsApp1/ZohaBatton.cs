@@ -11,13 +11,11 @@ namespace WindowsFormsApp1
     public class ZohaButton:Control
     {
 
-        public Size size;
-        public Point location;
-
-        public  ZohaButton(Size Size,Point Location)
+        public  ZohaButton(Size Size,Point Location,Color color)
         {
-            this.size = Size;
-            this.location = Location;
+            this.Size = Size;
+            this.Location = Location;
+            this.BackColor = color;
         }
     }
 }
